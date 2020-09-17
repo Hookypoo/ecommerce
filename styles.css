@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* -------------------------------index page------------------------------ */
 
 header {
     background: radial-gradient(#fff,#808080);
@@ -50,8 +51,7 @@ a {
     position: relative;
     text-align: center;
     display: flex;
-    flex-wrap: wrap;    
-    border: 1px solid red;
+    flex-wrap: wrap;     
     height: 100%;
     width: 100%;
     padding: 30px;    
@@ -63,28 +63,26 @@ a {
     text-align: center;
     display: flex;
     flex-wrap: wrap;    
-    border: 1px solid red;
     height: 100%;
     width: 100%;
     padding: 30px;    
-}
-.side-container {
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;    
-    border: 1px solid yellow;
-    width: 260px;
 }
 .thumbs-container {
     margin:auto;
     position: relative;
     text-align: center;
     display: flex;
-    flex-wrap: wrap;    
-    border: 1px solid green;
+    flex-wrap: wrap;   
     height: 100%;
     width: 1000px;
+}
+/* -----------------------sidebar------------------------------------ */
+.side-container {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;    
+    width: 260px;
 }
 .additional-info {
     display: flex;
@@ -95,6 +93,12 @@ a {
     margin: 20px;
     height: 650px;
     width: 250px;
+}
+/* -------------------------product page--------------------------------- */
+.products-title {    
+    margin: auto;
+    padding-top: 60px;
+    color: white;
 }
 .product-info {
     background-color: chartreuse;
@@ -156,17 +160,14 @@ a {
     height: 30px;
     width: 180px;
 }
-.products-title {
-    margin: auto;
-    padding-top: 60px;
-    color: white;
-}
+
 .product-description {      
     margin-top: 20px;
     height: 25px;
     width: 180px;
     color: blue;
 }
+/* ----------------------------footer----------------------------------- */
 .social-info {
     background-color: grey;
     display: flex;
@@ -174,9 +175,9 @@ a {
     height: 150px;
     width: 100%;
 }
+/* --------------------------contact page------------------------------- */
 .contact-form {
-    background-color: thistle;
-    border: 1px solid yellow;
+    background-color: teal;    
     margin:  auto;
     color: white;
 }
@@ -186,25 +187,36 @@ a {
     width: 500px;    
 }
 .contact-form label {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
     font-size: larger;
     font-weight: 200;
+}
+#comment {
+    display: inline-block;
+    text-align: right;
 }
 .contact-btn {
     border: 1px solid white;
     border-radius: 20px;
     background-color: yellowgreen;
     color: white;
-    height: 50px;
-    width: 160px;
+    height: 30px;
+    width: 120px;
     margin: 20px;   
-    font-size: 35px;
+    font-size: 25px;
 }
 .contact-title {
-    position: absolute;
     margin: auto;
 }
 /* ----------------------cart-page--------------- */
 
+i {
+    color: #ff523b;
+    margin-top: 75px;
+    margin-right: 20px;
+}
 .cart-page {
     margin: 80px auto;
 }
@@ -254,4 +266,20 @@ td:last-child {
 }
 th:last-child {
     text-align: right;
+}
+/* ------------------------About Page---------------------------- */
+.about-title {    
+    color: white;
+}
+.about-info {
+    color: white;
+    /* border: 1px solid fuchsia; */
+    height: 400px;
+    width: 500px;
+    font-size: 30px;
+    margin: auto;
+    text-align: left;
+}
+.about-labels {
+    color: teal;
 }
