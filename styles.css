@@ -77,15 +77,15 @@ a {
     width: 1000px;
 }
 /* -----------------------sidebar------------------------------------ */
-.side-container {
-    position: relative;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;    
+.side-container {     
+    display: flex;                                                                           /*wrapper*/
+    position: relative;         /* also try "fixed" to test its response */ 
+    text-align: center;        
     width: 260px;
+    height: 100%;
+    padding: 30px 0;
 }
-.additional-info {
-    display: flex;
+.additional-info {                                                                              /*sidebar*/
     background: radial-gradient(#fff,#808080);
     border: 1px solid rgb(255, 255, 255);
     color: white;
@@ -94,6 +94,39 @@ a {
     height: 650px;
     width: 250px;
 }
+/* .side-container .additional-info {
+    position: fixed;
+} */
+.side-container .additional-info ul li {
+    padding: 15px;
+}
+.side-container .additional-info ul li a {
+    color: black;
+}
+.side-container .additional-info ul li a:hover {
+    color: #ff523b;
+}
+.side-container .additional-info ul li:hover {
+     background: cornflowerblue;
+}
+.side-title {
+    margin: auto;
+    margin-top: 30px;
+    text-transform: uppercase;
+}
+.side-items li {
+    font-size: larger;
+}
+aside ul  {
+    list-style-type: none;
+}
+aside p  {
+    margin-top: 50px;
+}
+.deals {
+    color: #ff523b;
+}
+
 /* -------------------------product page--------------------------------- */
 .products-title {    
     margin: auto;
@@ -148,8 +181,9 @@ a {
     margin-right: auto;    
 }
 .product-price {    
-    color: black;
-    margin: 0;
+    color: black;    
+    font-size: larger;
+    font-weight: 100;
     height: 30px;
     width: 180px;
 }
@@ -211,9 +245,11 @@ a {
     margin: auto;
 }
 /* ----------------------cart-page--------------- */
-
-i {
-    color: #ff523b;
+.cart-body {
+    background-color: black;
+}
+.cart-img {
+    color: chartreuse;
     margin-top: 75px;
     margin-right: 20px;
 }
@@ -237,6 +273,7 @@ th {
 }
 td {
     padding: 10px 5px;
+    color: chartreuse;
 }
 td input {
     width: 40px;
