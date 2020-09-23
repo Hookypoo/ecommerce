@@ -88,13 +88,16 @@ a {
 /* -----------------------sidebar------------------------------------ */
 .side-container {     
     display: flex;                                                                           /*wrapper*/
-    position: relative;         /* also try "fixed" to test its response */ 
+           /* also try "fixed" to test its response */ 
     text-align: center;        
     width: 260px;
     height: 100%;
-    padding: 30px 0;
+    padding: 30px 0;    
 }
-.additional-info {                                                                              /*sidebar*/
+.additional-info {                                                                          /* sidebar */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;                                                      /*update for flexbox*/
     background: radial-gradient(#fff,#808080);
     border: 1px solid rgb(255, 255, 255);
     color: white;
@@ -103,9 +106,7 @@ a {
     height: 650px;
     width: 250px;
 }
-/* .side-container .additional-info {
-    position: fixed;
-} */
+
 .side-container .additional-info ul li {
     padding: 15px;
 }
@@ -224,6 +225,8 @@ aside p  {
 .social-info {
     background-color: grey;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     border: 1px solid;
     height: 150px;
     width: 100%;
@@ -351,7 +354,7 @@ th:last-child {
 }
 /* --------------------------footer----------------------- */
 
-footer {
+footer {    
     padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -406,17 +409,13 @@ footer {
 .footer-col-3 h3 {
     margin-bottom: 10px;
 }
-.social-info {
-    background-color: grey;
-    text-align: center;
+.social-info {    
+    background-color: grey;    
     display: flex;
-    border: 1px solid;
+    flex-direction: row;
+    text-align: center;
     height: 300px;
     width: 100%;
-}
-.social-icons {
-    border: 1px solid yellow;
-    height: 80px;
 }
 .copyright {
     border-top: 1px solid black;
