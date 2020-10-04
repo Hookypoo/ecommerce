@@ -12,8 +12,8 @@
 <body>
     <header>
         <h1 class="site-name">BajeZilla</h1>
-        <nav>
-            <ul>
+        <nav class="header-menu">
+            <ul id="MenuItems">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Products</a></li>
@@ -21,6 +21,7 @@
             </ul>
         </nav>
         <a href="cart.html"><i class="fa fa-shopping-cart fa-2x cart-img"></i></a>
+        <a href="#"><i class="fa fa-bars fa-2x menu-icon" onclick="menutoggle()"></i></a>
     </header>
     <div class="page-content">
         <div class="about-title">
@@ -32,7 +33,7 @@
             <p><span class="about-labels">Address:</span> #14 Bridgetown St.Michael</p><br>
             <p><span class="about-labels">Telephone:</span> 1-246-398-8941</p><br>
             <p><span class="about-labels">Fax:</span> 1-246-798-8991</p><br>
-            <p><span class="about-labels">Email: </span> www.BajeZilla@gmail.com</p>
+            <p><span class="about-labels">Email: </span>BajeZilla@gmail.com</p>
 
         </div>
 
@@ -69,6 +70,23 @@
         </div>
         <p class="copyright">copyright 2020 BajeZilla.com</p>
     </footer>
+
+    <!------------------- js for toggle menu --------------------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "250px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+
+        }
+    </script>
 
 
 </body>
