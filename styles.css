@@ -18,7 +18,8 @@ header nav ul li label {
     color: white;
 }
 h1 {
-    display: inline;    
+    display: flex; 
+    align-items: center;   
     margin: 10px;
     font-size: 4rem;
 }
@@ -35,10 +36,11 @@ nav ul {
 nav ul li {
     display: inline-block;    
     margin-left: 10px;
+    margin-top: 100px;
     padding-top: 40px;    
 }
 nav ul li a {
-    color: gray;
+    color: rgb(46, 45, 45);
 }
 a {
     text-decoration: none;
@@ -219,7 +221,7 @@ aside p  {
     color: white;
     height: 20px;
     width: 40px;
-    margin: 0;   
+    margin: 50px 0 0;   
     font-size: 15px;
 }
 .center {
@@ -230,7 +232,9 @@ aside p  {
 
 /* --------------------------contact page------------------------------- */
 .contact-form {
-    background-color: teal;    
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(94, 146, 146);    
     margin:  auto;
     color: white;
 }
@@ -262,14 +266,16 @@ aside p  {
 }
 .contact-title {
     margin: auto;
+    color: teal;
 }
+
 /* ----------------------cart-page--------------- */
 .cart-body {
     background-color: black;
 }
 .cart-img {
     color: chartreuse;
-    margin-top: 115px;
+    margin-top: 165px;
     margin-right: 20px;
 }
 .cart-page {
@@ -470,7 +476,7 @@ th:last-child {
     transform: translateY(-5px);    
 }
 #MenuItems li label {
-    color: gray;
+    color:  rgb(46, 45, 45);;
 }
 .menu-icon {                                      /* cell phone size, menu icon */
     color: teal;
@@ -492,9 +498,43 @@ th:last-child {
     width: 110px;  
     display: none;   
 } */
+
+/*---------------------- media query for screen 1366px and above ----------------------- */
+
+@media only screen and (max-width: 1366px) {
+  
+    nav ul li {
+        margin-top: 100px;
+    }
+    .cart-btn {
+        margin: 0;
+    }
+                                /*-------------contact page-------------------*/
+    .contact-form label {
+        display: flex;
+        color: black;
+        margin-left: 25px;
+        margin-bottom: 0;
+    }
+    .contact-form label:nth-of-type(1) {
+        margin-top: 10px;
+    }
+    .contact-form input { 
+        margin-top: 5px;    
+        width: 450px;
+    }
+    .contact-form textarea {     
+        width: 80%;
+        margin-left: 25px;
+    }
+    .contact-form button {     
+        margin: auto;
+        margin-bottom: 10px;
+    }
+}
 /*---------------------- media query for screen 1000px ----------------------- */
 
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1000px) {
     .side-container {
         display: none;
     }
@@ -502,9 +542,54 @@ th:last-child {
         font-size: 5vh;
         flex-wrap: nowrap;
     }
+    nav ul li {
+        margin-top: 0;
+    }
+    .cart-img {        
+        margin-top: 165px;        
+    }
+    .products-info {
+        flex-basis: 50%;
+        align-content: center;
+        justify-content: center;  
+        margin: 10px;      
+    }
+    .products-description {
+        font-size: 5vh;
+    }
+    .products-price {
+        margin-right: 0;
+        padding-top: 20px;
+        font-size: 4vh;
+    }
+    .cart-btn {
+        margin: 0;
+    }
+                                /*-------------contact page-------------------*/
+    .contact-form label {
+        display: flex;
+        color: black;
+        margin-left: 25px;
+        margin-bottom: 0;
+    }
+    .contact-form label:nth-of-type(1) {
+        margin-top: 10px;
+    }
+    .contact-form input { 
+        margin-top: 5px;    
+        width: 450px;
+    }
+    .contact-form textarea {     
+        width: 80%;
+        margin-left: 25px;
+    }
+    .contact-form button {     
+        margin: auto;
+        margin-bottom: 10px;
+    }
 }
 
-/*---------------------- media query for menu icon ----------------------- */
+/*---------------------- media query for menu icon and 800px screen----------------------- */
 
 @media only screen and (max-width: 800px) {
 
@@ -518,7 +603,7 @@ th:last-child {
         z-index: 40;           
         height: 250px;            
         width: 110px;            
-    }
+    }   
     nav ul {
         margin-top: 0;
         overflow: hidden;
@@ -528,6 +613,7 @@ th:last-child {
     nav ul li {
         display: block;
         background:#333;
+        margin-top: 0;
     }
     nav ul li a {                
         color: chartreuse;
@@ -583,9 +669,49 @@ th:last-child {
    .about-title {
        margin-bottom: 25px;
    }
+   .products-info {
+    flex-basis: 60%;
+    align-content: center;
+    justify-content: center;        
+    }
+    .products-description {
+        font-size: 5vh;
+    }
+    .products-price {
+        margin-right: 0;
+        padding-top: 20px;
+        font-size: 4vh;
+    }
+    .cart-btn {
+        margin: 0;
+    }
+                                /*-------------contact page-------------------*/
+    .contact-form label {
+        display: flex;
+        color: black;
+        margin-left: 25px;
+        margin-bottom: 0;
+    }
+    .contact-form label:nth-of-type(1) {
+        margin-top: 10px;
+    }
+    .contact-form input { 
+        margin-top: 5px;    
+        width: 450px;
+    }
+    .contact-form textarea {     
+        width: 80%;
+        margin-left: 25px;
+    }
+    .contact-form button {     
+        margin: auto;
+        margin-bottom: 10px;
+    }
 }
 
-/*---------------------- media query for screens 600px ----------------------- */
+/*---------------------- media query for screens 600px screen----------------------- */
+
+                                     /*---------------home page---------------*/
 
 @media only screen and (max-width: 600px) {
     .product-info {
@@ -601,11 +727,31 @@ th:last-child {
         padding-top: 20px;
         font-size: 4vh;
     }
+    .products-info {
+        flex-basis: 100%;
+        align-content: center;
+        justify-content: center;        
+    }
+    .products-description {
+        font-size: 5vh;
+    }
+    .products-price {
+        margin-right: 0;
+        padding-top: 20px;
+        font-size: 4vh;
+    }
+    .products-title h1 {    
+        font-size: 6vh;        
+    }
     .side-container {
         display: none;
     }
+    nav ul li {
+        margin-top: 0;
+    }
     
-    /* --------------About page-------------- */
+    
+                                 /* --------------About page-------------- */
 
     .about-info {
         font-size: 3.5vh;
@@ -619,4 +765,27 @@ th:last-child {
    .cart-img  {
        visibility: hidden;
    }
+                                 /*-------------contact page-------------------*/
+    
+    .contact-form label {
+        display: flex;
+        color: black;
+        margin-left: 25px;
+        margin-bottom: 0;
+    }
+    .contact-form label:nth-of-type(1) {
+        margin-top: 10px;
+    }
+    .contact-form input { 
+        margin-top: 5px;    
+        width: 350px;
+    }
+    .contact-form textarea {     
+        width: 350px;
+        margin-left: 25px;
+    }
+    .contact-form button {     
+        margin: auto;
+        margin-bottom: 10px;
+    }
 }
