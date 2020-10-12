@@ -12,8 +12,8 @@
 <body>
     <header>
         <h1 class="site-name">BajeZilla</h1>
-        <nav>
-            <ul>
+        <nav class="header-menu">
+            <ul id="MenuItems">
                 <li><a href="../index.html">Home</a></li>
                 <li><a href="../pages/about.html">About</a></li>
                 <li><a href="#">Products</a></li>
@@ -21,6 +21,7 @@
             </ul>
         </nav>
         <a href="../pages/cart.html"><i class="fa fa-shopping-cart fa-2x cart-img"></i></a>
+        <a href="#"><i class="fa fa-bars fa-2x menu-icon" onclick="menutoggle()"></i></a>
     </header>
     <div class="pages-content">
         <div class="products-title">
@@ -32,7 +33,7 @@
                     <img src="../images/bcs1.jpg" alt="smart-watch" class="center">
                 </div>
                 <div class="product-price">
-                    <p>Price $325.00</p>
+                    <p>Price $225.00</p>
                 </div>
                 <div>
                     <button type="submit" class="cart-btn">ADD</button>
@@ -43,7 +44,7 @@
                     <img src="../images/bcs2.jpg" alt="smart-watch" class="center">
                 </div>
                 <div class="product-price">
-                    <p>Price $225.00</p>
+                    <p>Price $220.00</p>
                 </div>
                 <div>
                     <button type="submit" class="cart-btn">ADD</button>
@@ -54,7 +55,7 @@
                     <img src="../images/bcs3.jpg" alt="smart-watch" class="center">
                 </div>
                 <div class="product-price">
-                    <p>Price $350.00</p>
+                    <p>Price $250.00</p>
                 </div>
                 <div>
                     <button type="submit" class="cart-btn">ADD</button>
@@ -65,7 +66,7 @@
                     <img src="../images/bcs4.jpg" alt="smart-watch" class="center">
                 </div>
                 <div class="product-price">
-                    <p>Price $235.00</p>
+                    <p>Price $200.00</p>
                 </div>
                 <div>
                     <button type="submit" class="cart-btn">ADD</button>
@@ -117,7 +118,22 @@
         </div>
         <p class="copyright">copyright 2020 BajeZilla.com</p>
     </footer>
+    <!------------------- js for toggle menu --------------------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
 
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "250px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+
+        }
+    </script>
 
 </body>
 
